@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 45em;
+  margin: 0 auto;
+  position: relative;
+  padding: 1em;
+}
+
+:root main {
+  display: block;
+}
+
+.main-content-index h1 {
+  color: $hhcii-red;
+  font-size: calc(1em + 7vw);
+  margin-bottom: 0.25em;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: calc(1em + 0.5vw);
+  margin-bottom: 1em;
+}
+
+hr {
+  opacity: 0;
+}
+
+.about {
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+
+a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $hhcii-blueTenis;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location {
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@supports (display:grid) {
+  @media (min-width: $tabletMaxWidth) and (min-height: $movilMaxWidth) {
+    main {
+      max-width: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
+      grid-template-rows: 35vh 40vh 15vh 10vh;
+    }
+
+    .main-content-index h1 {
+      grid-column: 3 / 6;
+      grid-row: 1 / 2;
+      z-index: 2;
+      padding-left: 0.25em;
+      margin-bottom: initial;
+    }
+
+    .main-content-index h2 {
+      grid-row: 1 / -1;
+      grid-column: 6 / 7;
+      writing-mode: vertical-rl;
+      margin-bottom: initial;
+      color: $hhcii-black;
+    }
+
+    hr {
+      grid-column: 5 / 6;
+      grid-row: 2;
+      height: 6px;
+      background-color: $hhcii-black;
+      width: 20ch;
+    }
+
+    .about {
+      grid-column: 5 / 6;
+      grid-row: 2;
+      align-self: end;
+      padding-bottom: 4vh;
+      margin-bottom: initial;
+    }
+
+    .main-content-index a {
+      grid-column: 5 / 6;
+      justify-self: end;
+      align-self: center;
+      margin-bottom: initial;
+    }
+
+    .main-content-index img {
+      grid-column: 1 / 4;
+      grid-row: 1 / 4;
+    }
+
+    .location {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      z-index: 2;
+      background: $hhcii-white;
+      text-align: center;
+      display: flex;
+
+      p {
+        margin: auto;
+      }
+    }
+
+    @media (min-width: $tabletMaxWidth) and (min-height: $movilMaxWidth) {
+      hr {
+        opacity: 1;
+      }
+    }
+  }
+}
