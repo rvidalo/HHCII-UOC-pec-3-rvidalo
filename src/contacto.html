@@ -10,29 +10,33 @@
 <body>
     <include src="./views/header.html"></include>
 
-    <div class="container">
-        <h1>Contacto</h1>
-        <p class="contact-text">¡Contáctanos para obtener más información sobre el torneo!</p><br>
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold mb-6">Contacto</h1>
+        <p class="text-lg mb-8">¡Contáctanos para obtener más información sobre el torneo!</p>
         <form name="contacto" method="POST" netlify>
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            <div class="mb-6">
+                <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                <input type="text" class="mt-1 p-2 w-full border rounded-md" id="nombre" placeholder="Ingrese su nombre">
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+            <div class="mb-6">
+                <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+                <input type="email" class="mt-1 p-2 w-full border rounded-md" id="email"
+                    placeholder="Ingrese su correo electrónico">
             </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Teléfono móvil</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Ingrese su número de teléfono móvil">
+            <div class="mb-6">
+                <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono móvil</label>
+                <input type="tel" class="mt-1 p-2 w-full border rounded-md" id="phone"
+                    placeholder="Ingrese su número de teléfono móvil">
             </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escriba su mensaje"></textarea>
+            <div class="mb-6">
+                <label for="mensaje" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                <textarea class="mt-1 p-2 w-full border rounded-md" id="mensaje" rows="5"
+                    placeholder="Escriba su mensaje"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Enviar</button>
         </form>
     </div>
+
     
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

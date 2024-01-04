@@ -3,10 +3,12 @@
  * Do not include SCSS code in this file.
  */
 
+ @tailwind base;
+ @tailwind components;
+
 /**
  * Import variables
  */
-
 @import "variables";
 
 /**
@@ -23,8 +25,8 @@
  */
 
 @import "layouts/basico";
-@import "layouts/home";
-@import "layouts/blog";
 @import "layouts/contacto";
 @import "layouts/header_footer";
 @import "layouts/participantes";
+
+@tailwind utilities;
