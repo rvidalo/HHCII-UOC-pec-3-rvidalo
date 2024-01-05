@@ -1,0 +1,13 @@
+ @layer components {
+   .h1-primary {
+     @apply w-full text-secondary text-8xl text-center my-6 font-serif;
+   }
+
+   .formlabel {
+     @apply block text-base font-bold;
+   }
+   
+   .forminput {
+     @apply mt-1 p-2 w-full border rounded-md;
+   }
+ }
